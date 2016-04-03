@@ -14,6 +14,14 @@ class Transaction
         add_to_transactions
     end
 
+    def self.all
+      @@transactions
+    end
+
+    def self.find(id)
+        @@transactions.find { |e| e.id == id  }
+    end
+
     def add_to_transactions
         @product.remove_from_stock
         @@transactions << self

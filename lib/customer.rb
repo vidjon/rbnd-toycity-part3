@@ -18,6 +18,13 @@ class Customer
       @@customers.find { |e|  e.name == customer_name }
   end
 
+  public
+
+  def purchase(product)
+      Transaction.new(self, product)
+      "#{@name} bought #{product.title}."
+  end
+
   private
 
   def add_to_customers
