@@ -24,7 +24,7 @@ class Customer
       if product.in_stock?
           Transaction.new(self, product)
       else
-          raise OutOfStockError, "'#{@title}' is out of stock."
+          raise OutOfStockError, "'#{product.title}' is out of stock."
       end
   end
 
