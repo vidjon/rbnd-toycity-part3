@@ -64,3 +64,26 @@ puts transaction2.product == nanoblock # Should return true
 
 #walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
+
+# Extra Features
+
+# Calculate total reveneues from transactions
+puts Transaction.total_revenues
+
+# Find transaction Features
+ironman = Product.find_by_title("LEGO Iron Man vs. Ultron")
+walter.purchase(ironman)
+julia = Customer.find_by_name("Julia Van Cleve")
+julia.purchase(ironman)
+
+#All transaction with customer Walter, should return 3
+puts Transaction.find_by_value(customer: walter).length
+
+#All transactions with product Ironman, should return 2
+puts Transaction.find_by_value(product: ironman).length
+
+#All transactions with product Ironman and customer Walter, should return 1
+puts Transaction.find_by_value(product: ironman, customer: walter).length
+
+#All transactions with product nanoblock and customer Julia, should return 0
+puts Transaction.find_by_value(product: nanoblock, customer: julia).length
