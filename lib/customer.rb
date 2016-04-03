@@ -22,7 +22,6 @@ class Customer
 
   def purchase(product)
       Transaction.new(self, product)
-      "#{@name} bought #{product.title}."
   end
 
   private
