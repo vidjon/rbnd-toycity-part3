@@ -30,6 +30,14 @@ class Product
       @stock > 0
   end
 
+  def remove_from_stock
+      if in_stock?
+          @stock -= 1
+      else
+          raise OutOfStockError, "'#{@title}' is out of stock."
+      end
+  end
+
   private
 
   def add_to_products
