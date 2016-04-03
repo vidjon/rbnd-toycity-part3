@@ -1,0 +1,12 @@
+How long did you spend working on this project?
+-About 60-90 min in total
+
+What was the most rewarding challenge you conquered?
+-Probably my extra feature of searching
+
+What two additional features did you build? Why?
+-Transaction.total_revenues : To calculate total revenues of all the transactions
+-Transaction.find_by_value : To be able to search transaction by customer and or product
+
+Where do you still have room to grow?
+-Working with hashes and getting more confident with Ruby syntax in general, without having to google for things
