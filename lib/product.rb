@@ -31,11 +31,7 @@ class Product
   end
 
   def remove_from_stock
-      if in_stock?
-          @stock -= 1
-      else
-          raise OutOfStockError, "'#{@title}' is out of stock."
-      end
+        @stock -= 1
   end
 
   private
